@@ -1,0 +1,4 @@
+rate_in,time_in,distance_in,rate_out,time_out,distance_out
+2,3,,2,3,6
+5,,7,5,1.4,7
+,11,13,1.18,11,13

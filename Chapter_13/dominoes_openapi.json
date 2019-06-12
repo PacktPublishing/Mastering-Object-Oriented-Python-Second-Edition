@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Deals simple hands of dominoes",
+    "version": "2019.02",
+    "title": "Chapter 13. Example 2"
+  },
+  "components": {
+    "schemas": {
+      "dominoes": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/cards/{n}": {
+      "get": {
+        "summary": "Get a hand of dominoes",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "n",
+            "description": "Number of dominoes",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Hand of dominoes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "cards": {
+                      "$ref": "#/components/schemas/dominoes"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/hands/{h}/cards/{c}": {
+      "get": {
+        "summary": "Get several hands of dominoes",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "h",
+            "description": "Number of Hands",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "in": "path",
+            "name": "c",
+            "description": "Number of dominoes",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of hands of dominoes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "hands": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/dominoes"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}

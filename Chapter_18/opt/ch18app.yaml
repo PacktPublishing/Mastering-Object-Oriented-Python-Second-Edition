@@ -1,0 +1,5 @@
+# Installation-wide configuration file: Chapter_18/opt/ch18app.yaml
+
+rounds: 100
+samples: 100
+stake: 50

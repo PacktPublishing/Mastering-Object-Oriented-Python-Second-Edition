@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Rolls dice",
+    "version": "2019.02",
+    "title": "Chapter 13. Examples 3 and 5"
+  },
+  "components": {
+    "schemas": {
+      "roll": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "roll": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "identifier": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/roll": {
+      "post": {
+        "summary": "Creates a roll",
+        "responses": {
+          "201": {
+            "description": "The new roll",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roll"
+                }
+              }
+            },
+            "headers": {
+              "Location": {
+                "description": "URL to use",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/roll/{id}": {
+      "get": {
+        "summary": "Repeats a roll's details",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An existing roll",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roll"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "404": {
+            "description": "Unknown"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a roll",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "identifier",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The revised roll",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/roll"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "404": {
+            "description": "Unknown"
+          }
+        }
+      }
+    }
+  }
+}

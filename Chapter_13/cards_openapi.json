@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Deals simple hands of cards",
+    "version": "2019.02",
+    "title": "Chapter 13. Example 2"
+  },
+  "components": {
+    "schemas": {
+      "cards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "rank": {
+              "type": "number"
+            },
+            "suit": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/cards/{n}": {
+      "get": {
+        "summary": "Get a hand of cards",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "n",
+            "description": "Number of Cards",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Hand of cards",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "cards": {
+                      "$ref": "#/components/schemas/cards"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/hands/{h}/cards/{c}": {
+      "get": {
+        "summary": "Get several hands of cards",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "h",
+            "description": "Number of Hands",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "in": "path",
+            "name": "c",
+            "description": "Number of Cards",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of hands of cards",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "hands": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/cards"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}
