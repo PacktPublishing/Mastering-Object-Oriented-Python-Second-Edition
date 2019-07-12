@@ -55,7 +55,7 @@ With the following software and hardware list you can run all code files present
 **Steven F. Lott**
 has been programming since the 1970s, when computers were large, expensive, and rare. As a contract software developer and architect, he has worked on hundreds of projects, from very small to very large ones. He's been using Python to solve business problems for over 10 years. His other titles with Packt include Python Essentials, Mastering Object-Oriented Python, Functional Python Programming Second Edition, Python for Secret Agents, and Python for Secret Agents II. Steven is currently a technomad who lives in various places on the East Coast of the US. You can follow him on Twitter via the handle @s_lott.
 
-## Other books by the authors
+## Other books by the author
 [Modern Python Cookbook ](https://www.packtpub.com/application-development/modern-python-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781786469250)
 
 [Functional Python Programming - Second Edition ](https://www.packtpub.com/application-development/functional-python-programming-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788627061)
