@@ -44,7 +44,7 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-20 | Python | Any |
+| 1-20 | Python 3.7 | Any |
 
 ### Related products
 * Python 3 Object-Oriented Programming - Third Edition  [[Packt]](https://www.packtpub.com/application-development/python-3-object-oriented-programming-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789615852) [[Amazon]](https://www.amazon.com/dp/1789615852)
