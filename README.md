@@ -2,7 +2,7 @@
 
 <a href="https://www.packtpub.com/programming/mastering-object-oriented-python-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789531367"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789531367-original.jpeg" alt="Mastering Object-Oriented Python - Second Edition " height="256px" align="right"></a>
 
-This is the code repository for [Mastering Object-Oriented Python - Second Edition ](https://www.packtpub.com/programming/mastering-object-oriented-python-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789531367), published by Packt.
+This is the code repository for [Mastering Object-Oriented Python - Second Edition](https://www.packtpub.com/programming/mastering-object-oriented-python-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789531367), published by Packt.
 
 **Build powerful applications with reusable code using OOP design patterns and Python 3.7**
 
