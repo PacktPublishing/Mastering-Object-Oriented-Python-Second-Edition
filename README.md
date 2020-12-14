@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this product for only $5 on PacktPub.com](https://www.packtpub.com/)
+-----
+*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # Mastering Object-Oriented Python - Second Edition 
 
 <a href="https://www.packtpub.com/programming/mastering-object-oriented-python-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789531367"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789531367-original.jpeg" alt="Mastering Object-Oriented Python - Second Edition " height="256px" align="right"></a>
